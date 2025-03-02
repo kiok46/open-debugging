@@ -1,0 +1,13 @@
+pragma cashscript ^0.11.0;
+
+contract Foo() {
+  function call(){
+    require(2==2);
+    bytes inp0 = tx.inputs[0].lockingBytecode;
+    console.log(inp0);
+    bytes inp1 = tx.inputs[1].lockingBytecode;
+    console.log(inp1);
+    bytes inp2 = tx.inputs[2].lockingBytecode;
+    console.log(inp2);
+  }
+}

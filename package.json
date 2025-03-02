@@ -1,0 +1,19 @@
+{
+  "name": "opencashdao",
+  "author": "Kuldeep Singh",
+  "version": "0.1.0",
+  "description": "OpenCashDAO",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run compile && node index.js",
+    "compile:test": "cashc ./contracts/Foo.cash -o ./artifacts/Foo.json && cashc ./contracts/Bar.cash -o ./artifacts/Bar.json && cashc ./contracts/Baz.cash -o ./artifacts/Baz.json",
+    "debug": "npm run compile:test && node index.js",
+    "build": "npm run compile:test"
+  },
+  "dependencies": {
+    "@bitauth/libauth": "^3.1.0-next.4",  
+    "cashc": "^0.11.0-next.1",
+    "cashscript": "^0.11.0-next.1",
+    "dotenv": "^16.4.7"
+  }
+}

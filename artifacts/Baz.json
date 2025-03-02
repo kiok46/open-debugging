@@ -1,0 +1,50 @@
+{
+  "contractName": "Baz",
+  "constructorInputs": [
+    {
+      "name": "baseCategory",
+      "type": "bytes32"
+    }
+  ],
+  "abi": [
+    {
+      "name": "call",
+      "inputs": [
+        {
+          "name": "categoryFromArg",
+          "type": "bytes32"
+        }
+      ]
+    }
+  ],
+  "bytecode": "OP_EQUALVERIFY OP_0 OP_UTXOBYTECODE OP_DROP OP_1",
+  "source": "pragma cashscript ^0.11.0;\n\ncontract Baz(bytes32 baseCategory) {\n    function call(bytes32 categoryFromArg){\n        require(baseCategory==categoryFromArg);\n        bytes inp0 = tx.inputs[0].lockingBytecode;\n        console.log(inp0);\n  }\n}",
+  "debug": {
+    "bytecode": "007a517a876900c75177",
+    "sourceMap": "5:16:5:28;;:30::45;;:16:::1;:8::47;6:31:6:32:0;:21::49:1;4:4:8:3;",
+    "logs": [
+      {
+        "ip": 9,
+        "line": 7,
+        "data": [
+          {
+            "stackIndex": 0,
+            "type": "bytes inp0",
+            "ip": 9
+          }
+        ]
+      }
+    ],
+    "requires": [
+      {
+        "ip": 6,
+        "line": 5
+      }
+    ]
+  },
+  "compiler": {
+    "name": "cashc",
+    "version": "0.11.0-next.1"
+  },
+  "updatedAt": "2025-03-02T07:46:04.202Z"
+}

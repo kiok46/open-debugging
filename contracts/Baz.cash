@@ -1,0 +1,9 @@
+pragma cashscript ^0.11.0;
+
+contract Baz(bytes32 baseCategory) {
+    function call(bytes32 categoryFromArg){
+        require(baseCategory==categoryFromArg);
+        bytes inp0 = tx.inputs[0].lockingBytecode;
+        console.log(inp0);
+  }
+}
