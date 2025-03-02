@@ -11,9 +11,8 @@
     "build": "npm run compile:test"
   },
   "dependencies": {
-    "@bitauth/libauth": "^3.1.0-next.4",  
+    "@bitauth/libauth": "^3.1.0-next.4",
     "cashc": "^0.11.0-next.1",
-    "cashscript": "^0.11.0-next.1",
-    "dotenv": "^16.4.7"
+    "cashscript": "^0.11.0-next.1"
   }
 }
